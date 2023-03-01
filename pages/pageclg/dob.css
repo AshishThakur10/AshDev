@@ -1,16 +1,20 @@
 .body{
-    background-color: skyblue;
+    background-color: rgb(198, 236, 9);
 }
 #heading{
     text-align: center;
-    text-shadow: 1px 1px 6px black;
+    text-shadow: 1px 1px 30px rgb(232, 182, 20), 4px 4px 30px rgb(232, 73, 29);
 }
 #name{
-    color: blueviolet;
+    color: rgb(46, 24, 146);
+    font-size: 20px;
 }
 #dob{
-    border: 1px solid black;
+    border: 1px solid rgb(56, 24, 24);
     text-align: center;
     margin-left: auto;
     margin-right: auto;
+}
+#list{
+    margin-top: 42px;
 }
