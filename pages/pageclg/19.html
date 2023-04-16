@@ -1,0 +1,76 @@
+<!--19. A sales company "ABC having some sale representative and there salary is calculated and salaray recipt is generated 
+    Basic salary = 10,000 
+    HRA = 10% of BS
+    DA = 20% of bs
+    Bonus = 10 % of BS If Sales > 10,000 
+-->
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>salary recipt</title>
+</head>
+
+<body>
+    name: <input type="text" id="name" required> <br>
+    sales: <input type="number" id="sal"><br>
+    <button onclick="cal()">submit</button>
+
+    <h1>Salary Recipt</h1>
+    <h2>Sales Representative: <span id="ename"> </span></h2>
+
+    <table>
+        <tr>
+            <td>Basic Salary:</td>
+            <td id="bs">----</td>
+        </tr>
+        <tr>
+            <td>House Rent Allowance (HRA):</td>
+            <td id="hra">----</td>
+        </tr>
+        <tr>
+            <td>Dearness Allowance (DA):</td>
+            <td id="da">----</td>
+        </tr>
+        <tr>
+            <td>Gross Salary:</td>
+            <td id="gs">----</td>
+        </tr>
+        <tr>
+            <td>Bonus:</td>
+            <td id="bonus">----</td>
+        </tr>
+        <tr>
+            <td>Total Salary:</td>
+            <td id="tSalary">----</td>
+        </tr>
+    </table>
+    <p>Date: <span id="date"> </span></p>
+
+    <script>
+        const bs = 10000;
+        let hra = bs * (10 / 100);
+        const da = bs * (20 / 100);
+        let name, sales, bonus, totalSalary = 13000.00;
+        let gs = bs + hra + da;
+        function cal() {
+            name = document.getElementById('name').value;
+            sales = document.getElementById('sal').value;
+            if (sales >= 10000) {
+                bonus = bs * (10 / 100);
+                document.getElementById("bonus").innerHTML = bonus + " INR";
+                totalSalary += bonus;
+            }
+            var todayDate = new Date().toISOString().slice(0, 10);
+            document.getElementById("ename").innerHTML = name;
+            document.getElementById("bs").innerHTML = bs + " INR";
+            document.getElementById("hra").innerHTML = hra + " INR";
+            document.getElementById("da").innerHTML = da + " INR";
+            document.getElementById("gs").innerHTML = gs + " INR";
+            document.getElementById("date").innerHTML = todayDate;
+            document.getElementById("tSalary").innerHTML = totalSalary + " INR";
+        }
+    </script>
+</body>
+
+</html>

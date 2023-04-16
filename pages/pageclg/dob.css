@@ -1,13 +1,18 @@
-.body{
-    background-color: rgb(198, 236, 9);
+body {
+    background-color: #151D21;
+    background-image: url('../../images/bg.png');
+    background-size: 100%;
+    background-repeat: no-repeat;
+    color: white;
 }
 #heading{
     text-align: center;
     text-shadow: 1px 1px 30px rgb(232, 182, 20), 4px 4px 30px rgb(232, 73, 29);
 }
 #name{
-    color: rgb(46, 24, 146);
+    color: rgb(255, 196, 4);
     font-size: 20px;
+    font-family: 'Courier New', Courier, monospace;
 }
 #dob{
     border: 1px solid rgb(56, 24, 24);
@@ -29,4 +34,31 @@
 }
 #list{
     margin-top: 42px;
+}
+
+a:hover {
+    color: #ff7a7a;
+}
+
+header .logo a {
+    background-image: url('../../images/logo.png');
+    background-size: 90px;
+    background-repeat: no-repeat;
+    display: inline-block;
+    height: 100px;
+    width: 100px;
+    position: relative;
+}
+
+li {
+    display: inline-block;
+    padding-right: 7%;
+}
+
+.topnav {
+    list-style: none;
+    font-family: 'Roboto Thin';
+    color: aliceblue;
+    margin: 50px 0 0 0;
+    text-align: right;
 }
