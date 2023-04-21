@@ -261,6 +261,8 @@ var students = [
         {"Sno":"259","Name": "Gayatri ma'am", "DOB":"19/04/1979"}
     ]
 
+var rollNum = prompt("Enter your Roll Number");
+
 function buildTable(data){
     var table = document.getElementById('listTable');
     console.log(table);
@@ -335,7 +337,7 @@ let day = date[0];
 
 function update() {
     const now = new Date()
-    countdown(258)
+    countdown(rollNum)
     document.querySelector("#name").innerHTML = name;
     document.querySelector("#days").innerHTML = days;
     document.querySelector("#hours").innerHTML = hours;
