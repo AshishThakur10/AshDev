@@ -261,7 +261,9 @@ var students = [
         {"Sno":"259","Name": "Gayatri ma'am", "DOB":"19/04/1979"}
     ]
 
-var rollNum = prompt("Enter your Roll Number");
+var rollNum = prompt("Enter your Roll Number")-1;
+
+var birthdayList = [];
 
 function buildTable(data){
     var table = document.getElementById('listTable');
@@ -301,11 +303,14 @@ let name = students[i].Name;
   
     if(d[1]== cm+1){
         displayList1(e.Sno-1)
+        birthdayList.push(e);
     }
     
     
 })
 let name;
+console.log(birthdayList); //unshorted arry      // 1-30 / pop which date is passed.
+//or push and compair to current date and then arrange
 
 function countdown(i) {
 var date = students[i].DOB.split('/');
