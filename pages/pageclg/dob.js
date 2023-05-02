@@ -302,15 +302,43 @@ let day = date[0] - 1;
 let name = students[i].Name;
   
     if(d[1]== cm+1){
-        displayList1(e.Sno-1)
         birthdayList.push(e);
     }
     
     
 })
 let name;
-console.log(birthdayList); //unshorted arry      // 1-30 / pop which date is passed.
+//console.log(birthdayList); //unshorted arry      // 1-30 / pop which date is passed.
 //or push and compair to current date and then arrange
+
+//booble sort birthdaylist array 
+for(let i = 0; i < birthdayList.length; i++){
+    for(let j =1; j< birthdayList.length-1; j++){
+        birthdayList[j-1].DOB;
+        let a =birthdayList[j-1].DOB;
+        let b = birthdayList[j].DOB;;
+        if(a>b){
+            let temp = birthdayList[j-1];
+            birthdayList[j-1] = birthdayList[j];
+            birthdayList[j] = temp;
+        }
+    }
+}
+
+birthdayList.forEach((e)=>{
+    var d = e.DOB.split('/');
+    let year = d[2] - 1;       // -1 for date formate
+    let m = d[1] - 1;
+    let day = date[0] - 1;
+    let name = students[i].Name;
+        if(d[1]== cm+1){
+            displayList1(e.Sno-1)
+        }
+    })
+// main counter rollnumber updated there is no input provided by user
+if(rollNum == -1 ) {
+    rollNum = birthdayList[24].Sno-1;
+}
 
 function countdown(i) {
 var date = students[i].DOB.split('/');
