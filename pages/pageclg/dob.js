@@ -336,8 +336,9 @@ birthdayList.forEach((e)=>{
         }
     })
 // main counter rollnumber updated there is no input provided by user
+var n = birthdayList.length-1;
 if(rollNum == -1 ) {
-    rollNum = birthdayList[24].Sno-1;
+    rollNum = birthdayList[n].Sno-1;
 }
 
 function countdown(i) {
